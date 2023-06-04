@@ -26,28 +26,23 @@ public class Main {
 		Person male = new Male();
 		Person female = new Female();
 		
-		int talent;
-		
-		System.out.println("What is your talent? ");
-		System.out.println("[1] can sing");
-		System.out.println("[2] can dance");
-		System.out.println("[3] can twerk");
-		talent = input.nextInt();
-		
-		switch (talent) {
-			case 1:
-				male.talent = "can sing";
-				male.talent();
-				break;
-			case 2:
-				male.talent = " can dance";
-				male.talent();
-				break;
-			case 3:
-				male.talent = "can twerk";
-				male.talent();
-				break;
+		char gender = 0;
+		System.out.print("Enter gender [M/F] ");
+		char inputGender = input.next().charAt(gender);
+
+		if (inputGender == 'm') {
+			System.out.println("Male :");
+			male.voiceSound();
+			male.talent();
+		}else if (inputGender == 'f') {
+			System.out.println("Female :");
+			female.voiceSound();
+			female.talent();
+
 		}
+		
+		input.close();
+		
 	}
 
 }
